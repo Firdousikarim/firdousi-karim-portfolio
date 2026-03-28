@@ -1,128 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firdousi Karim | IT Project Manager</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
+export default function Portfolio() {
+  const skills = {
+    delivery: [
+      'End-to-End Project Delivery',
+      'PMO Governance',
+      'Agile, Scrum, Waterfall & Hybrid',
+      'SDLC & Product Lifecycle',
+      'Change & Release Management',
+      'Benefits Realization',
+      'KPI / OKR Frameworks',
+      'RAID Logs & Risk Management',
+      'Scope, Schedule & Cost Control'
+    ],
+    tools: [
+      'Azure DevOps', 'JIRA', 'MS Project', 'SharePoint', 'MS Teams',
+      'API Integration', 'Dashboard Reporting', 'Azure / AWS Basics', 'Visio / Draw.io'
+    ],
+    leadership: [
+      'Executive Stakeholder Management',
+      'Vendor Selection & RFP Management',
+      'Budget Planning & Forecasting',
+      'Cost Optimization',
+      'Resource Utilization',
+      'Cross-functional Team Leadership',
+      'Lean Process Improvement'
+    ]
+  };
 
-  <!-- Header -->
-  <header class="bg-white shadow-md p-6 sticky top-0 z-10">
-    <h1 class="text-3xl font-bold">Firdousi Karim</h1>
-    <p class="text-lg text-gray-600">IT Project Manager | Global Delivery | Agile & Digital Transformation</p>
-  </header>
+  const projects = [
+    {
+      title: 'Credit Union Web & Mobile Application Delivery',
+      impact: 'Improved customer engagement by 25% and ensured 100% compliance.',
+    },
+    {
+      title: 'Enterprise Project Tracking & PMO Dashboard System',
+      impact: 'Improved reporting efficiency by 30% with standardized PMO workflows.',
+    },
+    {
+      title: 'Smart Classroom Digital Transformation',
+      impact: 'Delivered multi-location rollout on time for Kerala Government.',
+    },
+    {
+      title: 'HR Digital Process Transformation',
+      impact: 'Automated onboarding, appraisal, and task tracking workflows.',
+    }
+  ];
 
-  <!-- About -->
-  <section class="p-8 fade-in">
-    <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-    <p>
-      PMP-certified IT Project Manager with 7+ years of experience delivering scalable software and infrastructure solutions.
-      Strong expertise in Agile delivery, stakeholder management, and digital transformation across global and domestic clients.
-    </p>
-  </section>
+  const metrics = [
+    '20+ Projects Delivered',
+    '95% On-time Delivery',
+    '30% Profitability Improvement',
+    '20–30% Efficiency Gains',
+    'INR 4 Cr Budget Management'
+  ];
 
-  <!-- Global Experience -->
-  <section class="bg-white p-8 fade-in">
-    <h2 class="text-2xl font-semibold mb-4">Global Client Experience</h2>
-    <ul class="list-disc ml-6">
-      <li>Managed projects for US-based financial institutions (Credit Unions)</li>
-      <li>Coordinated cross-functional teams across offshore and onshore locations</li>
-      <li>Handled stakeholder communication across time zones</li>
-    </ul>
-  </section>
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-800">
+      <section className="bg-white shadow-sm border-b">
+        <div className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-8 items-center">
+          <div className="md:col-span-2">
+            <h1 className="text-4xl font-bold">Firdousi Karim</h1>
+            <p className="text-xl mt-3 text-slate-600">Project Manager | PMP® Certified | Global Delivery | Agile, PMO & Digital Transformation</p>
+            <p className="mt-6 leading-8 text-lg">
+              PMP®-certified Project Manager with 7.5 years of experience delivering end-to-end IT application,
+              software, and infrastructure projects across US clients , Government, Telecom, and Real Estate.
+              Proven track record in PMO governance, KPI frameworks, budgeting, RAID management,
+              and digital transformation.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <a
+                href="https://www.linkedin.com/in/firdousikarim/"
+                target="_blank"
+                rel="noreferrer"
+                className="px-5 py-3 rounded-2xl bg-slate-900 text-white shadow"
+              >
+                View LinkedIn Profile
+              </a>
+              <a
+                href="mailto:firu.douzi@gmail.com"
+                className="px-5 py-3 rounded-2xl border border-slate-300 bg-white"
+              >
+                Contact Me
+              </a>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-4">
+            {metrics.map((m) => (
+              <div key={m} className="bg-slate-100 rounded-2xl p-4 shadow-sm font-medium">{m}</div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-  <!-- Skills -->
-  <section class="p-8 fade-in">
-    <h2 class="text-2xl font-semibold mb-4">Core IT Skills</h2>
-    <ul class="grid grid-cols-2 gap-4">
-      <li>Agile, Scrum & Kanban</li>
-      <li>SDLC & Product Lifecycle</li>
-      <li>API Integration</li>
-      <li>Cloud (Azure / AWS basics)</li>
-      <li>Stakeholder Management</li>
-      <li>Risk & Cost Management</li>
-    </ul>
-  </section>
+      <section className="max-w-6xl mx-auto px-6 py-14">
+        <h2 className="text-2xl font-bold mb-6">Global Delivery Experience</h2>
+        <div className="grid md:grid-cols-2 gap-4 text-base leading-7">
+          <div className="bg-white p-6 rounded-2xl shadow-sm">Managed enterprise IT projects for US-based Credit Unions, MDC clients, and Real Estate platforms.</div>
+          <div className="bg-white p-6 rounded-2xl shadow-sm">Led offshore-onshore collaboration across India, US, and UAE teams.</div>
+          <div className="bg-white p-6 rounded-2xl shadow-sm">Managed governance reviews, executive dashboards, and leadership reporting.</div>
+          <div className="bg-white p-6 rounded-2xl shadow-sm">Coordinated engineering, QA, business, infrastructure, and vendor teams.</div>
+        </div>
+      </section>
 
-  <!-- Projects -->
-  <section class="bg-white p-8 fade-in">
-    <h2 class="text-2xl font-semibold mb-6">Key IT Projects</h2>
+      <section className="max-w-6xl mx-auto px-6 py-14">
+        <h2 className="text-2xl font-bold mb-6">Core Skills</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {Object.entries(skills).map(([key, values]) => (
+            <div key={key} className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="font-semibold text-lg capitalize mb-4">{key}</h3>
+              <ul className="space-y-2 text-sm leading-6">
+                {values.map((v) => <li key={v}>• {v}</li>)}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
 
-    <div class="mb-6">
-      <h3 class="text-xl font-bold">Credit Union Web & Mobile Banking Platform</h3>
-      <ul class="list-disc ml-6">
-        <li>Led Agile delivery with sprint planning and backlog management</li>
-        <li>Improved customer engagement by ~25%</li>
-        <li>Ensured 100% compliance with financial security standards</li>
-      </ul>
+      <section className="max-w-6xl mx-auto px-6 py-14">
+        <h2 className="text-2xl font-bold mb-6">Key Projects & Business Impact</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {projects.map((p) => (
+            <div key={p.title} className="bg-white p-6 rounded-2xl shadow-sm">
+              <h3 className="font-semibold text-lg">{p.title}</h3>
+              <p className="mt-3 text-slate-600">{p.impact}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="bg-slate-900 text-white mt-10">
+        <div className="max-w-6xl mx-auto px-6 py-12">
+          <h2 className="text-2xl font-bold">Contact</h2>
+          <p className="mt-4">Email: firu.douzi@gmail.com</p>
+          <p>Location: Kerala, India</p>
+          <a
+            href="https://www.linkedin.com/in/firdousikarim/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block mt-4 underline"
+          >
+            https://www.linkedin.com/in/firdousikarim/
+          </a>
+        </div>
+      </section>
     </div>
-
-    <div class="mb-6">
-      <h3 class="text-xl font-bold">Enterprise Project Tracking System</h3>
-      <ul class="list-disc ml-6">
-        <li>Developed dashboards improving reporting efficiency by ~30%</li>
-        <li>Enhanced resource utilization across teams</li>
-      </ul>
-    </div>
-
-    <div class="mb-6">
-      <h3 class="text-xl font-bold">Smart Classroom Digital Transformation</h3>
-      <ul class="list-disc ml-6">
-        <li>Delivered multi-location rollout on time</li>
-        <li>Improved operational efficiency in education delivery</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Metrics -->
-  <section class="p-8 fade-in">
-    <h2 class="text-2xl font-semibold mb-4">Delivery Metrics</h2>
-    <ul class="list-disc ml-6">
-      <li>Delivered 20+ projects successfully</li>
-      <li>On-time delivery rate: ~95%</li>
-      <li>Improved efficiency across projects by 20–30%</li>
-      <li>Managed cross-functional global teams</li>
-    </ul>
-  </section>
-
-  <!-- Certifications -->
-  <section class="bg-white p-8 fade-in">
-    <h2 class="text-2xl font-semibold mb-4">Certifications</h2>
-    <p class="font-semibold">PMP® – Project Management Professional</p>
-    <p class="text-gray-600">Globally recognized certification demonstrating expertise in project leadership and delivery.</p>
-  </section>
-
-  <!-- Contact -->
-  <section class="p-8 fade-in">
-    <h2 class="text-2xl font-semibold mb-4">Contact</h2>
-    <p>Email: firu.douzi@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/firdousikarim/" target="_blank" class="text-blue-600 underline">View Profile</a></p>
-  </section>
-
-  <footer class="bg-gray-800 text-white text-center p-4">
-    <p>© 2026 Firdousi Karim</p>
-  </footer>
-
-  <script>
-    const elements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    });
-    elements.forEach(el => observer.observe(el));
-  </script>
-
-</body>
-</html>
-
+  );
+}
 
 
